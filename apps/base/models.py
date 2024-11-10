@@ -6,7 +6,7 @@ from django.db import models
 class Book(models.Model):
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=255)
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания")
+    created_at = models.DateTimeField(auto_now_add=True)
     pages = models.PositiveIntegerField(verbose_name="Количество страниц")
     logo = models.ImageField(upload_to='logo/', blank=True, null=True, verbose_name="Логотип")
 
